@@ -31,3 +31,10 @@ Route::get('/', function () {
 // });
 
 Route::get('/posts/{post}', 'PostsController@show');
+
+// Route::get('/contact', function() {
+//     return view('contact');
+// });
+Route::view('/contact', 'contact');
+Route::view('/template', 'template');
+Route::view('/about', 'about');
