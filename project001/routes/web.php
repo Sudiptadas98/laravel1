@@ -37,4 +37,34 @@ Route::get('/posts/{post}', 'PostsController@show');
 // });
 Route::view('/contact', 'contact');
 Route::view('/template', 'template');
-Route::view('/about', 'about');
+// Route::view('/about', 'about');
+Route::get('/about', function () {
+  
+    return view('about', [
+        'articles' => App\Article::take(3)->latest()->get()
+    ]);
+});
+
+Route::get('/articles', 'ArticlesController@index');
+Route::post('/articles', 'ArticlesController@store');
+Route::get('/articles/create', 'ArticlesController@create');
+Route::get('/articles/{article}', 'ArticlesController@show');
+Route::get('/articles/{article}/edit', 'ArticlesController@edit');
+Route::put('/articles/{article}', 'ArticlesController@update');
+
+
+// GET, POST, PUT, DELETE
+
+// GET /articles = get me a list of articles
+// GET /articles/:id = get me that(:id) article
+// GET /articles/create = will show a form to create a new article
+// Get /articles/:id/edit = will show a foem to edit that(:id) article
+
+// POST /articles = to create/store after creating a new article
+// POST /articles/:id = to store that(:id) artile after editing
+
+// PUT /articles/:id = update that(:id) article
+
+// DELETE /articles/:id = delete that(:id) article
+
+
