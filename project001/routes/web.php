@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// app()->bind('example', function() {
+//     return new \App\Example();
+// });
 
 /*
 |--------------------------------------------------------------------------
@@ -12,9 +15,26 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@home');
+// Route::get('/', function () {
+    // return view('welcome');
+
+    // $example = resolve(App\Example::class);
+
+    // ddd($example);
+
+    // $container = new \App\Container();
+
+    // $container->bind('example', function() {
+    //     return new \App\Example();
+    // });
+
+    // $example = $container->resolve('example');
+
+    // $example->go();
+// });
+
+
 // Route::get('/posts/{post}', function ($post) {
 //     $posts = [
 //         'my1stpost' => 'Hello, this is my first blog!',
