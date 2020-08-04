@@ -9,15 +9,19 @@ class Example
     //     dump('it works!');
     // }
 
-    protected $collaborator;
+    // protected $collaborator;
 
-    protected $foo;
+    // protected $foo;
 
-    public function __construct(Collaborator $collaborator, $foo)
+    // public function __construct(Collaborator $collaborator, $foo)
+    // {
+    //     $this->collaborator = $collaborator;
+    //     $this->foo = $foo;
+    // }
+    
+    public function handle()
     {
-        $this->collaborator = $collaborator;
-        $this->foo = $foo;
+        die('it works');
     }
-
   
 }

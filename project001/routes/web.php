@@ -55,7 +55,7 @@ Route::get('/posts/{post}', 'PostsController@show');
 // Route::get('/contact', function() {
 //     return view('contact');
 // });
-Route::view('/contact', 'contact');
+// Route::view('/contact', 'contact');
 Route::view('/template', 'template');
 // Route::view('/about', 'about');
 Route::get('/about', function () {
@@ -86,5 +86,8 @@ Route::put('/articles/{article}', 'ArticlesController@update');
 // PUT /articles/:id = update that(:id) article
 
 // DELETE /articles/:id = delete that(:id) article
+
+Route::get('/contact', 'ContactController@show');
+Route::post('/contact', 'ContactController@store');
 
 

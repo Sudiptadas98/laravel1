@@ -22,9 +22,11 @@ Route::get('/', function () {
 
 //     return 'You are now logged out';
 // });
-
+Route::get('payments/create', 'PaymentsController@create')->middleware('auth');
+Route::post('payments', 'PaymentsController@store')->middleware('auth');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')
     ->name('home')
     ->middleware('auth');
+

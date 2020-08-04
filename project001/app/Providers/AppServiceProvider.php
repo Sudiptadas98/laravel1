@@ -17,12 +17,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('App\Example', function() {
-            $collaborator = new Collaborator();
-            $foo = 'foobar';
+        // $this->app->bind('App\Example', function() {
+        //     $collaborator = new Collaborator();
+        //     $foo = 'foobar';
 
-            return new Example($collaborator, $foo);
-        });
+        //     return new Example($collaborator, $foo);
+        // });
+        // $this->app->bind('example', function() {
+        //     return new Example();
+        // });
     }
 
     /**
