@@ -31,3 +31,5 @@ Route::get('/home', 'HomeController@index')
     ->name('home')
     ->middleware('auth');
 
+Route::get('conversations', 'ConversationsController@index');
+Route::get('conversations/{conversation}', 'ConversationsController@show');
